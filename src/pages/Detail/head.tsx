@@ -40,7 +40,7 @@ const Head: React.FC<IProps> = ({
   /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
   /************* This section will include this component general function *************/
   const handlePreview = () => {
-    window.open(`/preview/${id}`);
+    window.open(`/easy-mail-demo/#/preview/${id}`);
   };
   /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
   /* <------------------------------------ **** EFFECT START **** ------------------------------------ */
