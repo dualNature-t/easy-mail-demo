@@ -60,6 +60,7 @@ const Home = (): JSX.Element => {
           Github
         </Button>
       </Flex>
+
       <div
         style={{
           height: "calc(100vh - 70px)",

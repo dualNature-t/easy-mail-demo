@@ -12,11 +12,11 @@
   "dependencies": {
     "@ant-design/icons": "^5.4.0",
     "antd": "^5.19.4",
-    "easy-mail-editor": "^0.0.3",
     "mjml-browser": "^4.15.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.25.1"
+    "react-router-dom": "^6.25.1",
+    "easy-mail-editor": "0.0.4"
   },
   "devDependencies": {
     "@types/mjml-browser": "^4.15.0",

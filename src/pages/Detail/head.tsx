@@ -28,6 +28,7 @@ const Head: React.FC<IProps> = ({
   setLang,
   skin,
   setSkin,
+  handleSave,
 }): JSX.Element => {
   /* <------------------------------------ **** STATE START **** ------------------------------------ */
   /************* This section will include this component HOOK function *************/
@@ -40,6 +41,7 @@ const Head: React.FC<IProps> = ({
   /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
   /************* This section will include this component general function *************/
   const handlePreview = () => {
+    console.log(handleSave());
     window.open(`/easy-mail-demo/#/preview/${id}`);
   };
   /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
@@ -79,6 +81,8 @@ const Head: React.FC<IProps> = ({
         />
 
         {id !== "-1" && <Button onClick={handlePreview}>预览</Button>}
+
+        {/* <Button onClick={handleSave}>保存</Button> */}
       </Flex>
     </Flex>
   );
