@@ -31,6 +31,7 @@ const Home = (): JSX.Element => {
   const handleAdd = () => {
     navigate("/detail/-1");
   };
+
   /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
   /* <------------------------------------ **** EFFECT START **** ------------------------------------ */
   /************* This section will include this component general function *************/

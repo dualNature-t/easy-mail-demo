@@ -7,9 +7,9 @@
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
 import { useParams } from "react-router-dom";
-import Easymail from "easy-mail-editor";
 import { useMemo, useRef, useState } from "react";
 import { ConfigProvider, theme } from "antd";
+import Easymail from "easy-mail-editor";
 import Head from "./head";
 import { dataList } from "../../constant/data";
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
@@ -19,6 +19,7 @@ import { dataList } from "../../constant/data";
 interface IRefProps {
   getData: () => any;
 }
+
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 const Detail = (): JSX.Element => {
   /* <------------------------------------ **** STATE START **** ------------------------------------ */
