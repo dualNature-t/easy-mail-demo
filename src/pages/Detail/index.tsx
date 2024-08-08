@@ -9,9 +9,9 @@
 import { useParams } from "react-router-dom";
 import { useMemo, useRef, useState } from "react";
 import { ConfigProvider, theme } from "antd";
-import Easymail from "easy-mail-editor";
 import Head from "./head";
 import { dataList } from "../../constant/data";
+import Easymail from "easy-mail-editor";
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
