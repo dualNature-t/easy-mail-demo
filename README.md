@@ -1,5 +1,5 @@
 # easy-mail-demo
 
-easy mail editor demo
+## 🔗 Links
 
-## live
+- [Home page](https://dualnature-t.github.io/easy-mail-demo/)
