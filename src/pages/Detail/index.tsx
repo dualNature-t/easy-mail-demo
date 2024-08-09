@@ -11,14 +11,15 @@ import { useMemo, useRef, useState } from "react";
 import { ConfigProvider, theme } from "antd";
 import Head from "./head";
 import { dataList } from "../../constant/data";
-import Easymail from "easy-mail-editor";
+import Easymail, {
+  EasymailLangType,
+  EasymailRefProps,
+  EasymailSkinType,
+} from "easy-mail-editor";
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
 /* <------------------------------------ **** INTERFACE END **** ------------------------------------ */
-interface IRefProps {
-  getData: () => any;
-}
 
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 const Detail = (): JSX.Element => {
@@ -26,16 +27,14 @@ const Detail = (): JSX.Element => {
   /************* This section will include this component HOOK function *************/
   const { id } = useParams();
 
-  const [lang, setLang] = useState<"en_US" | "zh_CN">("en_US");
-  const [skin, setSkin] = useState<"light" | "dark">("light");
+  const [lang, setLang] = useState<EasymailLangType>("en_US");
+  const [skin, setSkin] = useState<EasymailSkinType>("light");
 
-  const ref = useRef<IRefProps>(null);
+  const ref = useRef<EasymailRefProps>(null);
 
   const appData = useMemo(() => {
     if (id == "-1") return undefined;
-    return JSON.parse(
-      dataList.find((i) => i.id === Number(id))?.tree as string
-    );
+    return dataList.find((i) => i.id === Number(id))?.tree;
   }, [id]);
 
   /* <------------------------------------ **** STATE END **** ------------------------------------ */
@@ -45,7 +44,7 @@ const Detail = (): JSX.Element => {
   /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
   /************* This section will include this component general function *************/
   const handleSave = () => {
-    console.log(JSON.stringify(ref.current?.getData()));
+    console.log(ref.current?.getData().mjml);
   };
   /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
   /* <------------------------------------ **** EFFECT START **** ------------------------------------ */

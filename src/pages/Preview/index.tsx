@@ -20,11 +20,10 @@ const Preview = (): JSX.Element => {
   /************* This section will include this component HOOK function *************/
   const { id } = useParams();
 
+  if (id == "-1") return <></>;
+
   const appData = useMemo(() => {
-    if (id == "-1") return undefined;
-    return JSON.parse(
-      dataList.find((i) => i.id === Number(id))?.tree as string
-    );
+    return dataList.find((i) => i.id === Number(id))?.tree as string;
   }, [id]);
   /* <------------------------------------ **** STATE END **** ------------------------------------ */
   /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */

@@ -82,7 +82,7 @@ const Head: React.FC<IProps> = ({
 
         {id !== "-1" && <Button onClick={handlePreview}>预览</Button>}
 
-        {/* <Button onClick={handleSave}>保存</Button> */}
+        <Button onClick={handleSave}>保存</Button>
       </Flex>
     </Flex>
   );
