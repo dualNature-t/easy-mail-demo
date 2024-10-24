@@ -2,7 +2,7 @@ import img_001 from "../assets/template_001.png";
 import img_002 from "../assets/template_002.png";
 import img_003 from "../assets/template_003.png";
 import img_004 from "../assets/template_004.png";
-import img_005 from "../assets/template_005.png";
+// import img_005 from "../assets/template_005.png";
 
 type DataType = {
   id: number;
