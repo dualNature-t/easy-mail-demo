@@ -31,11 +31,11 @@ const Home = (): JSX.Element => {
   const handleAdd = () => {
     navigate("/detail/-1");
   };
-
   /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
   /* <------------------------------------ **** EFFECT START **** ------------------------------------ */
   /************* This section will include this component general function *************/
   /* <------------------------------------ **** EFFECT END **** ------------------------------------ */
+
   return (
     <>
       <Flex
@@ -73,10 +73,10 @@ const Home = (): JSX.Element => {
           header={
             <Flex justify="space-between" align="center">
               <Typography.Title level={4} style={{ marginTop: "0.5em" }}>
-                模板
+                Templates
               </Typography.Title>
               <Button type="text" icon={<PlusOutlined />} onClick={handleAdd}>
-                添加
+                Add
               </Button>
             </Flex>
           }

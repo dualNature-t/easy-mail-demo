@@ -16,6 +16,8 @@ import Easymail, {
   EasymailRefProps,
   EasymailSkinType,
 } from "easy-mail-editor";
+import mjml2html from "mjml-browser";
+import FileSaver from "file-saver";
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
@@ -46,6 +48,18 @@ const Detail = (): JSX.Element => {
   const handleSave = () => {
     console.log(ref.current?.getData().mjml);
   };
+
+  const handleExport = (key: string) => {
+    const fileName = dataList.find((i) => i.id === Number(id))?.name;
+    const { mjml, json } = (ref.current as EasymailRefProps)?.getData();
+    if (key === "1") {
+      FileSaver(new Blob([mjml2html(mjml).html]), `${fileName}.html`);
+    } else if (key === "2") {
+      FileSaver(new Blob([mjml]), `${fileName}.txt`);
+    } else {
+      FileSaver(new Blob([JSON.stringify(json, null, 2)]), `${fileName}.json`);
+    }
+  };
   /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
   /* <------------------------------------ **** EFFECT START **** ------------------------------------ */
   /************* This section will include this component general function *************/
@@ -64,6 +78,7 @@ const Detail = (): JSX.Element => {
         skin={skin}
         setSkin={setSkin}
         handleSave={handleSave}
+        handleExport={handleExport}
       ></Head>
 
       <Easymail
